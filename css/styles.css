@@ -11,31 +11,62 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.eot');
+    src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold.woff') format('woff'),
+    url('../fonts/Montserrat-Bold.ttf') format('truetype'),
+    url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SegoeUI-Regular';
+    src: url('../fonts/SegoeUI-Regular.eot');
+    src: url('../fonts/SegoeUI-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SegoeUI-Regular.woff2') format('woff2'),
+    url('../fonts/SegoeUI-Regular.woff') format('woff'),
+    url('../fonts/SegoeUI-Regular.ttf') format('truetype'),
+    url('../fonts/SegoeUI-Regular.svg#SegoeUI-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-	font-family: 'Montserrat-Regular';
 	padding-top: 70px;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+.btn-fixed-width {
+    width: 163px !important;
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #e91451 !important;
     border-color: #e91451 !important;
     outline-color: #e91451 !important;
+    color: white !important;
 }
 
 .btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
-    color: #e91451 !important; 
-    width: 20vw !important;  
+    color: #e91451 !important;
 }
 
-.btn-outline-primary{ 
-    border-color: #e91451 !important; 
-    outline-color: #e91451 !important;
-    color: #e91451 ;
+.btn-outline-primary {
+    border-color: #000 !important;
+    outline-color: #000 !important;
+    color: #000 ;
 }
 
 .btn-outline-primary:hover {
 	background-color: #e91451 !important;
-    color: #fff;
+    color: #fff !important;
 }
 
 #abaut, #services, #contact {
@@ -43,10 +74,11 @@ body {
 }
 
 h2 {
-	font-size: 24px; 
-	color: #303030; 
+	color: #303030;
 	padding-top: 30px;
 	padding-bottom: 30px;
+    font-family: 'Montserrat-Regular', serif;
+    font-size: 40px;
 }
 
 /* NAVBAR SECTION */
@@ -69,16 +101,51 @@ h2 {
   color: #fff !important;
 }
 
+.nav-item {
+    margin-right: 40px;
+    font-family: 'SegoeUI-Regular', serif;
+    font-size: 20px;
+}
+
+.btn-register {
+    font-family: 'SegoeUI-Regular', serif;
+    font-size: 20px;
+}
+
+.btn-login {
+    font-family: 'SegoeUI-Regular', serif;
+    font-size: 20px;
+}
+
 /* HOME SECTION */
+
 .carousel-caption {
-    top: 200px;
+    top: 120px;
     bottom: auto;
 }
 
+.carousel-caption h1 {
+    font-family: 'Montserrat-Regular', serif;
+    font-size: 56px;
+}
+
+.carousel-caption span.site-name {
+    font-family: 'Montserrat-Bold', serif;
+    font-size: 56px;
+}
+
+.btn-profiter {
+    font-family: 'SegoeUI-Regular', serif;
+    font-size: 20px;
+    height: 50px;
+    width: 216px !important;
+    margin-top: 120px;
+    vertical-align: middle
+}
 /* ABAUT SECTION */
 
 .img-padding-b {
-	padding-bottom: 0px;
+	padding-bottom: 0;
 }
 
 .box {
@@ -94,32 +161,46 @@ h2 {
 	margin-bottom: 20px;
 }
 
+.box h6 {
+    font-family: 'SegoeUI-Regular', serif;
+    font-size: 20px;
+}
+.about-text {
+    font-family: 'Montserrat-Regular', serif;
+    font-size: 15px;
+}
 /* SERVICES SECTION */
 
 .panel {
   border: 1px solid #e91451;
   border-radius:0;
-  transition: box-shadow 0.5s; 
+  transition: box-shadow 0.5s;
   margin-bottom: 30px;
 }
 
 .panel:hover {
-  box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  box-shadow: 5px 0 40px rgba(0,0,0, .2);
 }
 
 .panel-heading {
-  color: #fff !important;
-  background-color: #e91451 !important;
-  padding: 25px;
+  color: #000 !important;
+  background-color: #fff !important;
+  padding: 10px;
   border-bottom: 1px solid transparent;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-.panel-body{
+.panel-heading h1 {
+    font-family: 'Montserrat-Bold', serif;
+    font-size: 20px !important;
+}
+
+.panel-body {
 	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .panel-footer .btn:hover {
@@ -128,33 +209,29 @@ h2 {
   color: #e91451;
 }
 
-.panel-footer {
-  background-color: #fff !important;
-}
-
-.panel-footer h3 {
-  font-size: 32px;
-}
-
-.panel-footer h4 {
-  color: #aaa;
-  font-size: 14px;
-}
-
-.panel-footer .btn {
-  margin: 15px 0;
-  background-color: #e91451;
-  color: #fff;
-}
-
 /* CONTACT SECTION */
 .bg-grey{
   background-color: #f6f6f6;
 }
 
+.form-control {
+    border-radius: 0 !important;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: black !important;
+    font-family: 'SegoeUI-Regular', serif;
+    font-size: 1rem;
+}
+
+.btn-contact {
+    font-family: 'Montserrat-Regular', serif;
+    font-size: 20px;
+    color: white !important;
+}
 /* FOOTER SECTION */
 footer {
-	background-color: #000000; 
+	background-color: #000000;
 	color: #ffffff;
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -162,9 +239,17 @@ footer {
 
 footer a {
 	color: #fff;
+    font-family: 'Montserrat-Regular', serif;
+    font-size: 20px;
 }
+
 footer a:hover {
 	color: #e91451;
+}
+
+.copy-text, .copy-text a{
+    font-family: 'Montserrat-Regular', serif;
+    font-size: 17px;
 }
 
 /* MEDIA QUERYS FOR RESPONSIVE DESIGN */
@@ -175,61 +260,66 @@ footer a:hover {
 	  width: 192px !important;
 	}
 	.carousel-caption {
-	    top: 0; 
+	    top: 0;
 	}
 }
 
+@media screen and (min-width: 992px) and (max-width: 1076px) {
+    .nav-item {
+        margin-right: 0;
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 1076px) and (max-width: 1160px) {
+    .nav-item {
+        margin-right: 5px;
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1160px) and (max-width: 1250px) {
+    .nav-item {
+        margin-right: 25px;
+        font-size: 18px;
+    }
+}
 /* home */
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
 	.carousel-caption {
-	    top: 100px; 
+	    top: 100px;
 	}
-	.btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
-	    width: 25vw !important;  
-	}
+
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
 	.carousel-caption {
-	    top: 50px; 
+	    top: 50px;
 	}
 
 	.carousel-caption h1 {
-	   font-size: 2rem; 
-	}
-
-	.btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
-	    width: 25vw !important;  
+	   font-size: 2rem;
 	}
 }
 
 @media screen and (min-width: 384px) and (max-width: 575px) {
 	.carousel-caption {
-	    top: 20px; 
+	    top: 20px;
 	}
 
 	.carousel-caption h1 {
-	   font-size: 1.5rem; 
-	}
-
-	.btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
-	    width: 30vw !important;  
+	   font-size: 1.5rem;
 	}
 }
 
 @media screen and (max-width: 383px) {
 	.carousel-caption {
-	    top: 10px; 
+	    top: 10px;
 	}
 
 	.carousel-caption h1 {
-	   font-size: 1rem; 
+	   font-size: 1rem;
 	}
 
-	.btn-light, .btn-light:hover, .btn-light:active, .btn-light:visited {
-	    width: 30vw !important;  
-	}
 }
 
 /* abaut */
@@ -241,71 +331,52 @@ footer a:hover {
 }
 
 /* services */
-@media screen and (min-width: 1250px) and (max-width: 1753px) {
+
+@media screen and (min-width: 575px) and (max-width: 923px) {
   .panel-heading h1 {
-    height: 96px;
+    height: 48px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1001px) {
-  .panel-heading h1 {
-    height: 96px;
-    font-size: 2rem;
-  }
+/* login page css  */
+
+label {
+    font-family: 'Montserrat-Regular', serif;
+    font-size: 14px;
 }
-
-@media screen and (min-width: 721px) and (max-width: 767px) {
-  .panel-heading h1 {
-    height: 96px;
-    font-size: 1.8rem;
-  }
-}
-
-@media screen and (min-width: 627px) and (max-width: 720px) {
-  .panel-heading h1 {
-    height: 96px;
-    font-size: 1.5rem;
- }
-}
-
-@media screen and (min-width: 576px) and (max-width: 626px) {
-  .panel-heading h1 {
-    height: 40px;
-    font-size: 1rem;
- }
-}
-
-@media screen and (max-width: 575px) {
-  .panel-heading h1 { 
-    font-size: 1rem;
- }
-}
-
-
-/* login page css  */ 
 
 .box-container {
   margin: 0;
   padding: 0;
-  background-color: #f6f6f6; 
+  background-color: #f6f6f6;
 }
 
- .login-box {
+.login-box {
   margin-top: 100px;
-  margin-bottom: 100px; 
+  margin-bottom: 100px;
   border: 1px solid #9C9C9C;
   background-color: #fff;
+}
+
+.login-box h3 {
+    font-family: 'Montserrat-Bold', serif;
+    font-size: 36px;
+}
+
+.login-box input[type="submit"] {
+    font-family: 'Montserrat-Bold', serif;
+    font-size: 18px;
+    color: white !important;
 }
 
 .login-form {
   padding: 20px;
 }
 
-
-
-.forgot-password a:link, .forgot-password a:visited,
-.forgot-password a:active {
-  color : #000;
+.forgot-password a:link, .forgot-password a:visited, .forgot-password a:active {
+    color : #000;
+    font-family: 'Montserrat-Regular', serif;
+    font-size: 14px;
 }
 
 .forgot-password a:hover {
